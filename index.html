@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Cadastro de Cliente</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="page-container">
+
+    <header class="topbar">
+      <h1>Formulário de Cadastro de Cliente</h1>
+    </header>
+
+    <div class="form-wrapper">
+      <form id="registerForm" class="form-card">
+
+        <!-- Nome Completo (Duas colunas: Nome e Sobrenome) -->
+        <div class="form-section-title">
+          <label>Nome Completo *</label>
+        </div>
+        <div class="form-grid name-grid">
+          <div class="input-group">
+            <input id="nome" name="nome" type="text" placeholder="" required>
+            <small class="input-hint">Nome</small>
+          </div>
+          <div class="input-group">
+            <input id="sobrenome" name="sobrenome" type="text" placeholder="">
+            <small class="input-hint">Sobrenome</small>
+          </div>
+        </div>
+
+        <!-- Endereço -->
+        <div class="form-section-title" style="margin-top: 15px;">
+          <label>Endereço *</label>
+        </div>
+
+        <div class="form-grid address-grid">
+          <!-- CEP com busca ViaCEP integrada -->
+          <div class="input-group full-width cep-container-group">
+            <div class="cep-wrapper">
+              <input id="cep" name="cep" type="text" placeholder="00000-000" maxlength="9" required>
+              <span class="loading">...</span>
+            </div>
+            <small class="input-hint">CEP (Digite para preencher o endereço automaticamente)</small>
+            <small id="cepMessage" class="message-normal"></small>
+          </div>
+
+          <div class="input-group full-width">
+            <input id="logradouro" name="logradouro" type="text" placeholder="" required>
+            <small class="input-hint">Rua / Logradouro</small>
+          </div>
+
+          <div class="input-group full-width">
+            <input id="complemento" name="complemento" type="text" placeholder="">
+            <small class="input-hint">Complemento (Apartamento, bloco, sala...)</small>
+          </div>
+
+          <div class="input-group">
+            <input id="numero" name="numero" type="text" placeholder="" required>
+            <small class="input-hint">Número</small>
+          </div>
+
+          <div class="input-group">
+            <input id="bairro" name="bairro" type="text" placeholder="" required>
+            <small class="input-hint">Bairro</small>
+          </div>
+
+          <div class="input-group">
+            <input id="cidade" name="cidade" type="text" placeholder="" required>
+            <small class="input-hint">Cidade</small>
+          </div>
+
+          <div class="input-group">
+            <select id="uf" name="uf" required>
+              <option value="">Selecione</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rond
